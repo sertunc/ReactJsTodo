@@ -45,7 +45,7 @@ export class TodoList extends React.Component {
                         <span className="id">{index + 1}</span>
                         <span className="title">{item.text}</span>
                         <span className="type" onClick={() => this.doneTask(index)} />
-                        <span className="delete" onClick={this.removeTask} />
+                        <span className="delete" onClick={() => this.removeTask(index)} />
                     </li>
                 );
             }
