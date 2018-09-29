@@ -51,11 +51,11 @@ class App extends Component {
         return (
             <div className="content">
                 <Header />
-                <TodoForm addTaskPropName={this.addTask} />
+                <TodoForm addTask={this.addTask} />
                 <TodoList
-                    myTasksPropName={this.state.myTasks}
-                    doneTaskPropName={this.doneTask}
-                    removeTaskPropName={this.removeTask} />
+                    myTasks={this.state.myTasks}
+                    doneTask={this.doneTask}
+                    removeTask={this.removeTask} />
                 <Footer />
             </div>
         );

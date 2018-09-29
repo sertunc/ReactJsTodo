@@ -11,11 +11,11 @@ export class TodoList extends React.Component {
 
     //constructor'da bind etmek yerine bu şekilde de bind edilebilir.'
     doneTask = (taskId) => {
-        this.props.doneTaskPropName(taskId);
+        this.props.doneTask(taskId);
     }
 
     removeTask = (taskId) => {
-        this.props.removeTaskPropName(taskId);
+        this.props.removeTask(taskId);
     }
 
     todoListFilter = (parameter) => {
@@ -31,7 +31,7 @@ export class TodoList extends React.Component {
     render() {
         let items_left = 0;
 
-        const items = this.props.myTasksPropName.map((item, index) => {
+        const items = this.props.myTasks.map((item, index) => {
 
             if (item.status === "passive")
                 items_left++;
