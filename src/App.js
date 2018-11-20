@@ -14,18 +14,18 @@ class App extends Component {
             myList: ["sertunc", "miray"]
         };
 
-        this.addTask = this.addTask.bind(this);
-        this.doneTask = this.doneTask.bind(this);
-        this.removeTask = this.removeTask.bind(this);
+        //this.addTask = this.addTask.bind(this);
+        //this.doneTask = this.doneTask.bind(this);
+        //this.removeTask = this.removeTask.bind(this);
     }
 
-    addTask(taskItem) {
+    addTask = (taskItem) => {
         let updatedList = this.state.myTasks;
         updatedList.push({ text: taskItem, status: "passive" });
         this.setState({ myTasks: updatedList });
     }
 
-    doneTask(taskId) {
+    doneTask = (taskId) => {
         let updatedList = this.state.myTasks;
 
         let newStatus = "";
@@ -40,7 +40,7 @@ class App extends Component {
         this.setState({ myTasks: updatedList });
     }
 
-    removeTask(taskId) {
+    removeTask = (taskId) => {
         let updatedList = this.state.myTasks;
         updatedList.splice(taskId, 1);
 

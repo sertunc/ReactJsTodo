@@ -5,10 +5,10 @@ export class TodoForm extends React.Component {
     constructor() {
         super();
 
-        this.addTask = this.addTask.bind(this);
+        //this.addTask = this.addTask.bind(this);
     }
 
-    addTask(e) {
+    addTask = (e) => {
         e.preventDefault();
         const inputElement = document.getElementById("todoInput");
         const inputValue = inputElement.value;
