@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Header } from "./Components/Header";
-import { TodoForm } from "./Components/TodoForm";
+import TodoForm from "./Components/TodoForm";
 import { TodoList } from "./Components/TodoList";
 import { Footer } from "./Components/Footer";
 
@@ -13,10 +13,6 @@ class App extends Component {
             myTasks: [{ text: "Ders Çalış", status: "passive" }],
             myList: ["sertunc", "miray"]
         };
-
-        //this.addTask = this.addTask.bind(this);
-        //this.doneTask = this.doneTask.bind(this);
-        //this.removeTask = this.removeTask.bind(this);
     }
 
     addTask = (taskItem) => {
